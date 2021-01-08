@@ -10,13 +10,15 @@
 		01267B0D2702E4CA2A2ECDA5 /* Pods_StarWars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2334614C44FB173EAF14F825 /* Pods_StarWars.framework */; };
 		B9716C2025A8A30F00A99041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C1F25A8A30F00A99041 /* AppDelegate.swift */; };
 		B9716C2225A8A30F00A99041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C2125A8A30F00A99041 /* SceneDelegate.swift */; };
-		B9716C2425A8A30F00A99041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C2325A8A30F00A99041 /* ViewController.swift */; };
 		B9716C2925A8A31400A99041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9716C2825A8A31400A99041 /* Assets.xcassets */; };
 		B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9716C2A25A8A31400A99041 /* LaunchScreen.storyboard */; };
 		B9716C4225A8AEFD00A99041 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4125A8AEFD00A99041 /* Localizable.swift */; };
 		B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9716C4525A8AF4100A99041 /* Localizable.string.strings */; };
 		B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4825A8B05800A99041 /* Coordinator.swift */; };
 		B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4C25A8B08900A99041 /* AppCoordinator.swift */; };
+		B9716C5425A8B31C00A99041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C5225A8B31C00A99041 /* HomeViewController.swift */; };
+		B9716C5525A8B31C00A99041 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716C5325A8B31C00A99041 /* HomeViewController.xib */; };
+		B9716C5825A8B34E00A99041 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,6 @@
 		B9716C1C25A8A30F00A99041 /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9716C1F25A8A30F00A99041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9716C2125A8A30F00A99041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B9716C2325A8A30F00A99041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9716C2825A8A31400A99041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9716C2B25A8A31400A99041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9716C2D25A8A31400A99041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +35,9 @@
 		B9716C4525A8AF4100A99041 /* Localizable.string.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.string.strings; sourceTree = "<group>"; };
 		B9716C4825A8B05800A99041 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B9716C4C25A8B08900A99041 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B9716C5225A8B31C00A99041 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B9716C5325A8B31C00A99041 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +121,7 @@
 		B9716C3725A8A4AE00A99041 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				B9716C2325A8A30F00A99041 /* ViewController.swift */,
+				B9716C5025A8B2EA00A99041 /* Home */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -137,6 +141,16 @@
 				B9716C4C25A8B08900A99041 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B9716C5025A8B2EA00A99041 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */,
+				B9716C5225A8B31C00A99041 /* HomeViewController.swift */,
+				B9716C5325A8B31C00A99041 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		C17761C66217271981AF69E2 /* Pods */ = {
@@ -210,6 +224,7 @@
 				B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */,
 				B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */,
 				B9716C2925A8A31400A99041 /* Assets.xcassets in Resources */,
+				B9716C5525A8B31C00A99041 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,11 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */,
-				B9716C2425A8A30F00A99041 /* ViewController.swift in Sources */,
 				B9716C2025A8A30F00A99041 /* AppDelegate.swift in Sources */,
 				B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */,
 				B9716C4225A8AEFD00A99041 /* Localizable.swift in Sources */,
 				B9716C2225A8A30F00A99041 /* SceneDelegate.swift in Sources */,
+				B9716C5825A8B34E00A99041 /* HomeCoordinator.swift in Sources */,
+				B9716C5425A8B31C00A99041 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
