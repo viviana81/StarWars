@@ -17,8 +17,12 @@
 		B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4825A8B05800A99041 /* Coordinator.swift */; };
 		B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4C25A8B08900A99041 /* AppCoordinator.swift */; };
 		B9716C5425A8B31C00A99041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C5225A8B31C00A99041 /* HomeViewController.swift */; };
-		B9716C5525A8B31C00A99041 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716C5325A8B31C00A99041 /* HomeViewController.xib */; };
 		B9716C5825A8B34E00A99041 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */; };
+		B9716C6025A8BEC400A99041 /* UIView+Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C5F25A8BEC400A99041 /* UIView+Pin.swift */; };
+		B9716C6725A8C8A600A99041 /* GridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C6525A8C8A600A99041 /* GridCollectionViewCell.swift */; };
+		B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */; };
+		B9716C6B25A8C90B00A99041 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C6A25A8C90B00A99041 /* Reusable.swift */; };
+		B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C6E25A8CF7300A99041 /* Layouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +40,12 @@
 		B9716C4825A8B05800A99041 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B9716C4C25A8B08900A99041 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B9716C5225A8B31C00A99041 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B9716C5325A8B31C00A99041 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B9716C5F25A8BEC400A99041 /* UIView+Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pin.swift"; sourceTree = "<group>"; };
+		B9716C6525A8C8A600A99041 /* GridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCollectionViewCell.xib; sourceTree = "<group>"; };
+		B9716C6A25A8C90B00A99041 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		B9716C6E25A8CF7300A99041 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +89,10 @@
 		B9716C1E25A8A30F00A99041 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				B9716C6D25A8CF5E00A99041 /* Utilities */,
 				B9716C3425A8A46700A99041 /* Application */,
 				B9716C4B25A8B07600A99041 /* Coordinators */,
+				B9716C5E25A8BEA800A99041 /* Extensions */,
 				B9716C4025A8AEE300A99041 /* Protocol */,
 				B9716C3525A8A48600A99041 /* Resources */,
 				B9716C3725A8A4AE00A99041 /* Scene */,
@@ -131,6 +141,7 @@
 			children = (
 				B9716C4125A8AEFD00A99041 /* Localizable.swift */,
 				B9716C4825A8B05800A99041 /* Coordinator.swift */,
+				B9716C6A25A8C90B00A99041 /* Reusable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -146,11 +157,36 @@
 		B9716C5025A8B2EA00A99041 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B9716C6325A8C85E00A99041 /* Cell */,
 				B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */,
 				B9716C5225A8B31C00A99041 /* HomeViewController.swift */,
-				B9716C5325A8B31C00A99041 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		B9716C5E25A8BEA800A99041 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C5F25A8BEC400A99041 /* UIView+Pin.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B9716C6325A8C85E00A99041 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C6525A8C8A600A99041 /* GridCollectionViewCell.swift */,
+				B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B9716C6D25A8CF5E00A99041 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C6E25A8CF7300A99041 /* Layouts.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C17761C66217271981AF69E2 /* Pods */ = {
@@ -221,10 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */,
 				B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */,
 				B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */,
 				B9716C2925A8A31400A99041 /* Assets.xcassets in Resources */,
-				B9716C5525A8B31C00A99041 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +317,13 @@
 				B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */,
 				B9716C2025A8A30F00A99041 /* AppDelegate.swift in Sources */,
 				B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */,
+				B9716C6725A8C8A600A99041 /* GridCollectionViewCell.swift in Sources */,
+				B9716C6B25A8C90B00A99041 /* Reusable.swift in Sources */,
 				B9716C4225A8AEFD00A99041 /* Localizable.swift in Sources */,
+				B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */,
 				B9716C2225A8A30F00A99041 /* SceneDelegate.swift in Sources */,
 				B9716C5825A8B34E00A99041 /* HomeCoordinator.swift in Sources */,
+				B9716C6025A8BEC400A99041 /* UIView+Pin.swift in Sources */,
 				B9716C5425A8B31C00A99041 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
