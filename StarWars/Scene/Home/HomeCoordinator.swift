@@ -12,15 +12,36 @@ class HomeCoordinator: Coordinator {
     var window: UIWindow
     let navigation: UINavigationController
     let homeViewController: HomeViewController
+    let services: Services
+    var nextPage: String?
     
-    init(window: UIWindow) {
+    init(window: UIWindow, services: Services) {
         self.window = window
+        self.services = services
         homeViewController = HomeViewController()
         self.navigation = UINavigationController(rootViewController: homeViewController)
     }
     
     func start() {
+        homeViewController.delegate = self
         window.rootViewController = navigation
         window.makeKeyAndVisible()
+    }
+}
+
+extension HomeCoordinator: HomeViewControllerDelegate {
+    
+    func getPeople() {
+        
+        services.getPeople { [weak self] response, error in
+          
+            if let response = response {
+                self?.nextPage = response.next
+                self?.homeViewController.people = response.results
+            } else if let error = error {
+                print(error)
+                // TODO: show error
+            }
+        }
     }
 }

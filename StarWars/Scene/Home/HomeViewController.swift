@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate: class {
+    func getPeople()
+}
+
 class HomeViewController: UIViewController {
      
     // MARK: - Vars
@@ -22,8 +26,16 @@ class HomeViewController: UIViewController {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: collectionLayout.layout)
         collection.dataSource = self
         collection.register(GridCollectionViewCell.self)
+        collection.register(ListCollectionViewCell.self)
         return collection
     }()
+    
+    var people: [People] = [] {
+        didSet {
+            starCollectionView.reloadData()
+        }
+    }
+    weak var delegate: HomeViewControllerDelegate?
     
     // MARK: - ViewControllers lifecycle
     override func viewDidLoad() {
@@ -31,6 +43,8 @@ class HomeViewController: UIViewController {
         
         starCollectionView.pin(to: view)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.grid.3x2"), style: .done, target: self, action: #selector(changeLayout))
+        
+        delegate?.getPeople()
     }
     
     // MARK: - Actions
@@ -44,11 +58,20 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return people.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: GridCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        return cell
+        if collectionLayout == .grid {
+            let cell: GridCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            let star = people[indexPath.item]
+            cell.configure(withStar: star)
+            return cell
+        } else {
+            let cell: ListCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            let star = people[indexPath.item]
+            cell.configure(withStar: star)
+            return cell
+        }
     }
 }

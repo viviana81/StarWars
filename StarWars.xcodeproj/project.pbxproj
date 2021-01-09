@@ -25,6 +25,10 @@
 		B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C6E25A8CF7300A99041 /* Layouts.swift */; };
 		B9716C7725A8F39200A99041 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C7625A8F39100A99041 /* Services.swift */; };
 		B9716C7B25A8F3E700A99041 /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C7A25A8F3E700A99041 /* StarWarsApi.swift */; };
+		B9716C9525A9940C00A99041 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9325A9940C00A99041 /* ListCollectionViewCell.swift */; };
+		B9716C9625A9940C00A99041 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716C9425A9940C00A99041 /* ListCollectionViewCell.xib */; };
+		B9716C9A25A99E1300A99041 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9925A99E1300A99041 /* Models.swift */; };
+		B9716C9D25A9A89900A99041 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9C25A9A89900A99041 /* ApiServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		B9716C6E25A8CF7300A99041 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
 		B9716C7625A8F39100A99041 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		B9716C7A25A8F3E700A99041 /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
+		B9716C9325A9940C00A99041 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9716C9425A9940C00A99041 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		B9716C9925A99E1300A99041 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B9716C9C25A9A89900A99041 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +171,7 @@
 		B9716C5025A8B2EA00A99041 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B9716C6325A8C85E00A99041 /* Cell */,
+				B9716C6325A8C85E00A99041 /* Cells */,
 				B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */,
 				B9716C5225A8B31C00A99041 /* HomeViewController.swift */,
 			);
@@ -178,19 +186,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B9716C6325A8C85E00A99041 /* Cell */ = {
+		B9716C6325A8C85E00A99041 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				B9716C6525A8C8A600A99041 /* GridCollectionViewCell.swift */,
-				B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */,
+				B9716C9825A999F700A99041 /* Grid */,
+				B9716C9225A993F000A99041 /* List */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B9716C6D25A8CF5E00A99041 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				B9716C6E25A8CF7300A99041 /* Layouts.swift */,
+				B9716C9925A99E1300A99041 /* Models.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -199,8 +208,27 @@
 			isa = PBXGroup;
 			children = (
 				B9716C7A25A8F3E700A99041 /* StarWarsApi.swift */,
+				B9716C9C25A9A89900A99041 /* ApiServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B9716C9225A993F000A99041 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C9325A9940C00A99041 /* ListCollectionViewCell.swift */,
+				B9716C9425A9940C00A99041 /* ListCollectionViewCell.xib */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B9716C9825A999F700A99041 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C6525A8C8A600A99041 /* GridCollectionViewCell.swift */,
+				B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */,
+			);
+			path = Grid;
 			sourceTree = "<group>";
 		};
 		C17761C66217271981AF69E2 /* Pods */ = {
@@ -272,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9716C9625A9940C00A99041 /* ListCollectionViewCell.xib in Resources */,
 				B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */,
 				B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */,
 				B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */,
@@ -354,7 +383,10 @@
 				B9716C6725A8C8A600A99041 /* GridCollectionViewCell.swift in Sources */,
 				B9716C6B25A8C90B00A99041 /* Reusable.swift in Sources */,
 				B9716C4225A8AEFD00A99041 /* Localizable.swift in Sources */,
+				B9716C9525A9940C00A99041 /* ListCollectionViewCell.swift in Sources */,
+				B9716C9A25A99E1300A99041 /* Models.swift in Sources */,
 				B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */,
+				B9716C9D25A9A89900A99041 /* ApiServices.swift in Sources */,
 				B9716C2225A8A30F00A99041 /* SceneDelegate.swift in Sources */,
 				B9716C5825A8B34E00A99041 /* HomeCoordinator.swift in Sources */,
 				B9716C6025A8BEC400A99041 /* UIView+Pin.swift in Sources */,

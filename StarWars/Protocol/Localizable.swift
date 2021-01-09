@@ -51,4 +51,3 @@ extension String: Localizable {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
 }
-
