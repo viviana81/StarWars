@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,8 @@
 		B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */; };
 		B9716C6B25A8C90B00A99041 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C6A25A8C90B00A99041 /* Reusable.swift */; };
 		B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C6E25A8CF7300A99041 /* Layouts.swift */; };
+		B9716C7725A8F39200A99041 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C7625A8F39100A99041 /* Services.swift */; };
+		B9716C7B25A8F3E700A99041 /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C7A25A8F3E700A99041 /* StarWarsApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		B9716C6625A8C8A600A99041 /* GridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCollectionViewCell.xib; sourceTree = "<group>"; };
 		B9716C6A25A8C90B00A99041 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		B9716C6E25A8CF7300A99041 /* Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouts.swift; sourceTree = "<group>"; };
+		B9716C7625A8F39100A99041 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		B9716C7A25A8F3E700A99041 /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,14 +93,15 @@
 		B9716C1E25A8A30F00A99041 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
-				B9716C6D25A8CF5E00A99041 /* Utilities */,
 				B9716C3425A8A46700A99041 /* Application */,
 				B9716C4B25A8B07600A99041 /* Coordinators */,
 				B9716C5E25A8BEA800A99041 /* Extensions */,
 				B9716C4025A8AEE300A99041 /* Protocol */,
 				B9716C3525A8A48600A99041 /* Resources */,
 				B9716C3725A8A4AE00A99041 /* Scene */,
+				B9716C7925A8F3CF00A99041 /* Services */,
 				B9716C3625A8A4A100A99041 /* Storyboards */,
+				B9716C6D25A8CF5E00A99041 /* Utilities */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				B9716C4125A8AEFD00A99041 /* Localizable.swift */,
 				B9716C4825A8B05800A99041 /* Coordinator.swift */,
 				B9716C6A25A8C90B00A99041 /* Reusable.swift */,
+				B9716C7625A8F39100A99041 /* Services.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -189,6 +195,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		B9716C7925A8F3CF00A99041 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B9716C7A25A8F3E700A99041 /* StarWarsApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		C17761C66217271981AF69E2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +224,7 @@
 				B9716C1825A8A30F00A99041 /* Sources */,
 				B9716C1925A8A30F00A99041 /* Frameworks */,
 				B9716C1A25A8A30F00A99041 /* Resources */,
+				B9FF876A5E3813CD91DF95B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +300,23 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
+		B9FF876A5E3813CD91DF95B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWars/Pods-StarWars-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarWars/Pods-StarWars-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarWars/Pods-StarWars-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F22B47EF004ACA2E14A4D82E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */,
+				B9716C7725A8F39200A99041 /* Services.swift in Sources */,
+				B9716C7B25A8F3E700A99041 /* StarWarsApi.swift in Sources */,
 				B9716C2025A8A30F00A99041 /* AppDelegate.swift in Sources */,
 				B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */,
 				B9716C6725A8C8A600A99041 /* GridCollectionViewCell.swift in Sources */,
