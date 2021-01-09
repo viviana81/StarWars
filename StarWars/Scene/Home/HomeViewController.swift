@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeViewControllerDelegate: class {
     func getPeople()
+    func onCellTap(star: People)
 }
 
 class HomeViewController: UIViewController {
@@ -84,5 +85,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             print("Ultima cella: \(last.name)")
             delegate?.getPeople()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let star = people[indexPath.item]
+        delegate?.onCellTap(star: star)
     }
 }

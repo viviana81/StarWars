@@ -30,7 +30,7 @@ class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeViewControllerDelegate {
-    
+   
     func getPeople() {
         
         let page = nextPage
@@ -45,5 +45,10 @@ extension HomeCoordinator: HomeViewControllerDelegate {
                 // TODO: show error
             }
         }
+    }
+    
+    func onCellTap(star: People) {
+        let detail = DetailViewController(star: star)
+        navigation.pushViewController(detail, animated: true)
     }
 }

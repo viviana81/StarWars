@@ -30,7 +30,14 @@
 		B9716C9A25A99E1300A99041 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9925A99E1300A99041 /* Models.swift */; };
 		B9716C9D25A9A89900A99041 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9C25A9A89900A99041 /* ApiServices.swift */; };
 		B9716CA925AA085D00A99041 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CA725AA085D00A99041 /* DetailViewController.swift */; };
-		B9716CAA25AA085D00A99041 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CA825AA085D00A99041 /* DetailViewController.xib */; };
+		B9716CCA25AA111E00A99041 /* StarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CC825AA111E00A99041 /* StarDetailTableViewCell.swift */; };
+		B9716CCB25AA111E00A99041 /* StarDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CC925AA111E00A99041 /* StarDetailTableViewCell.xib */; };
+		B9716CD125AA1BD100A99041 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CCF25AA1BD100A99041 /* ImageTableViewCell.swift */; };
+		B9716CD225AA1BD100A99041 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CD025AA1BD100A99041 /* ImageTableViewCell.xib */; };
+		B9716CD925AA1C0B00A99041 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CD725AA1C0B00A99041 /* FilmTableViewCell.swift */; };
+		B9716CDA25AA1C0B00A99041 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CD825AA1C0B00A99041 /* FilmTableViewCell.xib */; };
+		B9716CDF25AA1C2A00A99041 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CDD25AA1C2A00A99041 /* VehicleTableViewCell.swift */; };
+		B9716CE025AA1C2A00A99041 /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CDE25AA1C2A00A99041 /* VehicleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +68,14 @@
 		B9716C9925A99E1300A99041 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B9716C9C25A9A89900A99041 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 		B9716CA725AA085D00A99041 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		B9716CA825AA085D00A99041 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		B9716CC825AA111E00A99041 /* StarDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarDetailTableViewCell.swift; sourceTree = "<group>"; };
+		B9716CC925AA111E00A99041 /* StarDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarDetailTableViewCell.xib; sourceTree = "<group>"; };
+		B9716CCF25AA1BD100A99041 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		B9716CD025AA1BD100A99041 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		B9716CD725AA1C0B00A99041 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		B9716CD825AA1C0B00A99041 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmTableViewCell.xib; sourceTree = "<group>"; };
+		B9716CDD25AA1C2A00A99041 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		B9716CDE25AA1C2A00A99041 /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,9 +190,9 @@
 		B9716C5025A8B2EA00A99041 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B9716C6325A8C85E00A99041 /* Cells */,
 				B9716C5725A8B34E00A99041 /* HomeCoordinator.swift */,
 				B9716C5225A8B31C00A99041 /* HomeViewController.swift */,
+				B9716C6325A8C85E00A99041 /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -240,9 +254,56 @@
 			isa = PBXGroup;
 			children = (
 				B9716CA725AA085D00A99041 /* DetailViewController.swift */,
-				B9716CA825AA085D00A99041 /* DetailViewController.xib */,
+				B9716CC625AA102200A99041 /* Cells */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		B9716CC625AA102200A99041 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CD625AA1BEA00A99041 /* Vehicles */,
+				B9716CD525AA1BE300A99041 /* Films */,
+				B9716CCE25AA1BB800A99041 /* Image */,
+				B9716CC725AA10ED00A99041 /* StarDetail */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B9716CC725AA10ED00A99041 /* StarDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CC825AA111E00A99041 /* StarDetailTableViewCell.swift */,
+				B9716CC925AA111E00A99041 /* StarDetailTableViewCell.xib */,
+			);
+			path = StarDetail;
+			sourceTree = "<group>";
+		};
+		B9716CCE25AA1BB800A99041 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CCF25AA1BD100A99041 /* ImageTableViewCell.swift */,
+				B9716CD025AA1BD100A99041 /* ImageTableViewCell.xib */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		B9716CD525AA1BE300A99041 /* Films */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CD725AA1C0B00A99041 /* FilmTableViewCell.swift */,
+				B9716CD825AA1C0B00A99041 /* FilmTableViewCell.xib */,
+			);
+			path = Films;
+			sourceTree = "<group>";
+		};
+		B9716CD625AA1BEA00A99041 /* Vehicles */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CDD25AA1C2A00A99041 /* VehicleTableViewCell.swift */,
+				B9716CDE25AA1C2A00A99041 /* VehicleTableViewCell.xib */,
+			);
+			path = Vehicles;
 			sourceTree = "<group>";
 		};
 		C17761C66217271981AF69E2 /* Pods */ = {
@@ -315,10 +376,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C9625A9940C00A99041 /* ListCollectionViewCell.xib in Resources */,
-				B9716CAA25AA085D00A99041 /* DetailViewController.xib in Resources */,
+				B9716CDA25AA1C0B00A99041 /* FilmTableViewCell.xib in Resources */,
+				B9716CE025AA1C2A00A99041 /* VehicleTableViewCell.xib in Resources */,
 				B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */,
 				B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */,
 				B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */,
+				B9716CD225AA1BD100A99041 /* ImageTableViewCell.xib in Resources */,
+				B9716CCB25AA111E00A99041 /* StarDetailTableViewCell.xib in Resources */,
 				B9716C2925A8A31400A99041 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,10 +462,14 @@
 				B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */,
 				B9716C6725A8C8A600A99041 /* GridCollectionViewCell.swift in Sources */,
 				B9716C6B25A8C90B00A99041 /* Reusable.swift in Sources */,
+				B9716CCA25AA111E00A99041 /* StarDetailTableViewCell.swift in Sources */,
+				B9716CD925AA1C0B00A99041 /* FilmTableViewCell.swift in Sources */,
 				B9716C4225A8AEFD00A99041 /* Localizable.swift in Sources */,
 				B9716C9525A9940C00A99041 /* ListCollectionViewCell.swift in Sources */,
 				B9716C9A25A99E1300A99041 /* Models.swift in Sources */,
+				B9716CD125AA1BD100A99041 /* ImageTableViewCell.swift in Sources */,
 				B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */,
+				B9716CDF25AA1C2A00A99041 /* VehicleTableViewCell.swift in Sources */,
 				B9716C9D25A9A89900A99041 /* ApiServices.swift in Sources */,
 				B9716C2225A8A30F00A99041 /* SceneDelegate.swift in Sources */,
 				B9716C5825A8B34E00A99041 /* HomeCoordinator.swift in Sources */,
