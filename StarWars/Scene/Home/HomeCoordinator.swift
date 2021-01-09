@@ -13,7 +13,7 @@ class HomeCoordinator: Coordinator {
     let navigation: UINavigationController
     let homeViewController: HomeViewController
     let services: Services
-    var nextPage: String?
+    var nextPage: Int?
     
     init(window: UIWindow, services: Services) {
         self.window = window
@@ -33,11 +33,13 @@ extension HomeCoordinator: HomeViewControllerDelegate {
     
     func getPeople() {
         
-        services.getPeople { [weak self] response, error in
+        let page = nextPage
+        
+        services.getPeople(page: page) { [weak self] response, error in
           
             if let response = response {
-                self?.nextPage = response.next
-                self?.homeViewController.people = response.results
+                self?.nextPage = response.nextPage
+                self?.homeViewController.people += response.results
             } else if let error = error {
                 print(error)
                 // TODO: show error

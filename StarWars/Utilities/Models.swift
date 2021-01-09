@@ -12,6 +12,8 @@ enum Gender: String, Codable {
     case male
     case female
     case other = "n/a"
+    case hermaphrodite
+    case none
 }
 
 struct People: Codable {
@@ -66,5 +68,23 @@ struct Vehicle: Codable {
     enum CodingKeys: String, CodingKey {
         case price = "cost_in_credits"
         case name, model, manufacturer, lenght
+    }
+}
+
+struct PaginatedResponse<T: Decodable>: Decodable {
+    let count: Int
+    let next: String?
+    let results: [T]
+    
+    var nextPage: Int? {
+        guard
+            let next = next,
+            let components = URLComponents(string: next),
+            let queryItems = components.queryItems,
+            let pageQueryItem = queryItems.first(where: { $0.name == "page" }),
+            let value = pageQueryItem.value
+        else { return nil }
+        
+        return Int(value)
     }
 }

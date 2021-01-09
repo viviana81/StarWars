@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
     lazy private var starCollectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: collectionLayout.layout)
         collection.dataSource = self
+        collection.delegate = self
         collection.register(GridCollectionViewCell.self)
         collection.register(ListCollectionViewCell.self)
         return collection
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return people.count
     }
@@ -72,6 +73,16 @@ extension HomeViewController: UICollectionViewDataSource {
             let star = people[indexPath.item]
             cell.configure(withStar: star)
             return cell
+        }
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if indexPath.item == people.count - 1 {
+            let last = people[indexPath.item]
+            
+            print("Ultima cella: \(last.name)")
+            delegate?.getPeople()
         }
     }
 }

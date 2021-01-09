@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum StarWarsApi {
-    case getPeople
+    case getPeople(page: Int?)
 }
 
 extension StarWarsApi: TargetType {
@@ -21,7 +21,7 @@ extension StarWarsApi: TargetType {
     var path: String {
         switch self {
         case .getPeople:
-            return "people"
+            return "people/"
         }
     }
     
@@ -38,8 +38,13 @@ extension StarWarsApi: TargetType {
     
     var task: Task {
         switch self {
-        case .getPeople:
-            return .requestPlain
+        case .getPeople(let page):
+            
+            if let page = page {
+                return .requestParameters(parameters: ["page": page], encoding: URLEncoding.default)
+            } else {
+                return .requestPlain
+            }
         }
     }
     

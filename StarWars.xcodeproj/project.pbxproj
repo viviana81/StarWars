@@ -29,6 +29,8 @@
 		B9716C9625A9940C00A99041 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716C9425A9940C00A99041 /* ListCollectionViewCell.xib */; };
 		B9716C9A25A99E1300A99041 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9925A99E1300A99041 /* Models.swift */; };
 		B9716C9D25A9A89900A99041 /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C9C25A9A89900A99041 /* ApiServices.swift */; };
+		B9716CA925AA085D00A99041 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CA725AA085D00A99041 /* DetailViewController.swift */; };
+		B9716CAA25AA085D00A99041 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CA825AA085D00A99041 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		B9716C9425A9940C00A99041 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		B9716C9925A99E1300A99041 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B9716C9C25A9A89900A99041 /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		B9716CA725AA085D00A99041 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B9716CA825AA085D00A99041 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		B9716C3725A8A4AE00A99041 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B9716CA625AA083100A99041 /* Detail */,
 				B9716C5025A8B2EA00A99041 /* Home */,
 			);
 			path = Scene;
@@ -231,6 +236,15 @@
 			path = Grid;
 			sourceTree = "<group>";
 		};
+		B9716CA625AA083100A99041 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CA725AA085D00A99041 /* DetailViewController.swift */,
+				B9716CA825AA085D00A99041 /* DetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		C17761C66217271981AF69E2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C9625A9940C00A99041 /* ListCollectionViewCell.xib in Resources */,
+				B9716CAA25AA085D00A99041 /* DetailViewController.xib in Resources */,
 				B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */,
 				B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */,
 				B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */,
@@ -376,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */,
+				B9716CA925AA085D00A99041 /* DetailViewController.swift in Sources */,
 				B9716C7725A8F39200A99041 /* Services.swift in Sources */,
 				B9716C7B25A8F3E700A99041 /* StarWarsApi.swift in Sources */,
 				B9716C2025A8A30F00A99041 /* AppDelegate.swift in Sources */,

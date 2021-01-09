@@ -9,5 +9,5 @@ import Foundation
 
 protocol Services {
     
-    func getPeople(completion: @escaping (PaginatedResponse<People>?, Error?) -> Void)
+    func getPeople(page: Int?, completion: @escaping (PaginatedResponse<People>?, Error?) -> Void)
 }
