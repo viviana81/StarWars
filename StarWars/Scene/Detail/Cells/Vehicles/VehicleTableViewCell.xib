@@ -4,27 +4,147 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="VehicleTableViewCell" customModule="StarWars" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="228" id="KGk-i7-Jjw" customClass="VehicleTableViewCell" customModule="StarWars" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-Zf-Hv4">
+                        <rect key="frame" x="16" y="8" width="288" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRB-Rr-fCD">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="vehicleDetail.name.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7o-er-1Y7">
+                                <rect key="frame" x="0.0" y="18" width="288" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xQ8-RL-xke">
+                        <rect key="frame" x="16" y="50" width="272" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpd-dP-zzb">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="vehicleDetail.model.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yog-WQ-CF9">
+                                <rect key="frame" x="0.0" y="18" width="272" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V98-jp-9Mv">
+                        <rect key="frame" x="16" y="92" width="272" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produttore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Lo-S2-IB1">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="vehicleDetail.manifacturer.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO6-I4-lp6">
+                                <rect key="frame" x="0.0" y="18" width="272" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I81-fD-BCZ">
+                        <rect key="frame" x="16" y="134" width="272" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQV-6L-SZ8">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="vehicleDetail.price.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apt-fG-gEi">
+                                <rect key="frame" x="0.0" y="18" width="272" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y7E-og-htr">
+                        <rect key="frame" x="16" y="176" width="272" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunghezza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-44-GWd">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="vehicleDetail.lenght.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePW-Ta-uwU">
+                                <rect key="frame" x="0.0" y="18" width="272" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="s3w-Zf-Hv4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="5ct-fs-1pd"/>
+                    <constraint firstItem="I81-fD-BCZ" firstAttribute="top" secondItem="V98-jp-9Mv" secondAttribute="bottom" constant="8" symbolic="YES" id="J6r-ye-e7w"/>
+                    <constraint firstAttribute="trailing" secondItem="s3w-Zf-Hv4" secondAttribute="trailing" constant="16" id="KUh-eI-Gbk"/>
+                    <constraint firstItem="I81-fD-BCZ" firstAttribute="leading" secondItem="V98-jp-9Mv" secondAttribute="leading" id="Kgo-DL-gTA"/>
+                    <constraint firstItem="V98-jp-9Mv" firstAttribute="leading" secondItem="xQ8-RL-xke" secondAttribute="leading" id="O3h-tq-r8n"/>
+                    <constraint firstItem="y7E-og-htr" firstAttribute="trailing" secondItem="I81-fD-BCZ" secondAttribute="trailing" id="WLx-AT-6pc"/>
+                    <constraint firstItem="s3w-Zf-Hv4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ZIM-4M-aee"/>
+                    <constraint firstItem="xQ8-RL-xke" firstAttribute="top" secondItem="s3w-Zf-Hv4" secondAttribute="bottom" constant="8" id="aHl-Li-vGu"/>
+                    <constraint firstItem="V98-jp-9Mv" firstAttribute="trailing" secondItem="xQ8-RL-xke" secondAttribute="trailing" id="bKC-Ad-F7P"/>
+                    <constraint firstItem="y7E-og-htr" firstAttribute="leading" secondItem="I81-fD-BCZ" secondAttribute="leading" id="hPx-eP-ucr"/>
+                    <constraint firstItem="xQ8-RL-xke" firstAttribute="leading" secondItem="s3w-Zf-Hv4" secondAttribute="leading" id="nXa-Jr-sr2"/>
+                    <constraint firstItem="y7E-og-htr" firstAttribute="top" secondItem="I81-fD-BCZ" secondAttribute="bottom" constant="8" symbolic="YES" id="ohH-FK-E7J"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="y7E-og-htr" secondAttribute="bottom" constant="7" id="qLr-Qf-ODr"/>
+                    <constraint firstItem="I81-fD-BCZ" firstAttribute="trailing" secondItem="V98-jp-9Mv" secondAttribute="trailing" id="ubB-G2-H0W"/>
+                    <constraint firstItem="V98-jp-9Mv" firstAttribute="top" secondItem="xQ8-RL-xke" secondAttribute="bottom" constant="8" id="vSx-ez-Chi"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xQ8-RL-xke" secondAttribute="trailing" constant="16" id="w2u-O1-44t"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="35" y="76"/>
+            <connections>
+                <outlet property="lenghtLabel" destination="ePW-Ta-uwU" id="dtN-BR-A6r"/>
+                <outlet property="manifacturerLabel" destination="ZO6-I4-lp6" id="wU2-ie-WQd"/>
+                <outlet property="modelLabel" destination="yog-WQ-CF9" id="cdT-DC-M0c"/>
+                <outlet property="nameLabel" destination="Q7o-er-1Y7" id="EDO-lG-PfY"/>
+                <outlet property="priceLabel" destination="Apt-fG-gEi" id="azC-18-uRM"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="136.60714285714286"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

@@ -13,7 +13,6 @@
 		B9716C2925A8A31400A99041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9716C2825A8A31400A99041 /* Assets.xcassets */; };
 		B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9716C2A25A8A31400A99041 /* LaunchScreen.storyboard */; };
 		B9716C4225A8AEFD00A99041 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4125A8AEFD00A99041 /* Localizable.swift */; };
-		B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9716C4525A8AF4100A99041 /* Localizable.string.strings */; };
 		B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4825A8B05800A99041 /* Coordinator.swift */; };
 		B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C4C25A8B08900A99041 /* AppCoordinator.swift */; };
 		B9716C5425A8B31C00A99041 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716C5225A8B31C00A99041 /* HomeViewController.swift */; };
@@ -38,6 +37,16 @@
 		B9716CDA25AA1C0B00A99041 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CD825AA1C0B00A99041 /* FilmTableViewCell.xib */; };
 		B9716CDF25AA1C2A00A99041 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CDD25AA1C2A00A99041 /* VehicleTableViewCell.swift */; };
 		B9716CE025AA1C2A00A99041 /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9716CDE25AA1C2A00A99041 /* VehicleTableViewCell.xib */; };
+		B9716CF425AB4B6100A99041 /* BlackNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CF325AB4B6100A99041 /* BlackNavigationController.swift */; };
+		B9716CFA25AB4ED000A99041 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9716CF925AB4EC900A99041 /* Starjedi.ttf */; };
+		B9716CFC25AB4ED200A99041 /* Starjhol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9716CF825AB4EC800A99041 /* Starjhol.ttf */; };
+		B9716CFF25AB50FA00A99041 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9716CFE25AB50FA00A99041 /* UIFont.swift */; };
+		B9DDB9E425AB5AB900380951 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDB9E325AB5AB900380951 /* BaseCollectionViewCell.swift */; };
+		B9DDB9E825AB5EFB00380951 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDB9E725AB5EFB00380951 /* UIViewController.swift */; };
+		B9DDBA0425AB632300380951 /* star-wars-theme-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9DDBA0325AB632300380951 /* star-wars-theme-song.mp3 */; };
+		B9DDBA0D25AB6ED000380951 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9DDBA0F25AB6ED000380951 /* Localizable.strings */; };
+		B9DDBA1425AB727600380951 /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DDBA1225AB727600380951 /* FilmDetailViewController.swift */; };
+		B9DDBA2325AB79E700380951 /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DDBA2225AB79E700380951 /* FilmDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +60,6 @@
 		B9716C2B25A8A31400A99041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9716C2D25A8A31400A99041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9716C4125A8AEFD00A99041 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		B9716C4525A8AF4100A99041 /* Localizable.string.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.string.strings; sourceTree = "<group>"; };
 		B9716C4825A8B05800A99041 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B9716C4C25A8B08900A99041 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B9716C5225A8B31C00A99041 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,18 @@
 		B9716CD825AA1C0B00A99041 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmTableViewCell.xib; sourceTree = "<group>"; };
 		B9716CDD25AA1C2A00A99041 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		B9716CDE25AA1C2A00A99041 /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
+		B9716CF325AB4B6100A99041 /* BlackNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackNavigationController.swift; sourceTree = "<group>"; };
+		B9716CF825AB4EC800A99041 /* Starjhol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjhol.ttf; sourceTree = "<group>"; };
+		B9716CF925AB4EC900A99041 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		B9716CFE25AB50FA00A99041 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		B9DDB9E325AB5AB900380951 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9DDB9E725AB5EFB00380951 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B9DDBA0325AB632300380951 /* star-wars-theme-song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "star-wars-theme-song.mp3"; sourceTree = "<group>"; };
+		B9DDBA0B25AB6EBC00380951 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B9DDBA0E25AB6ED000380951 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9DDBA1025AB6ED700380951 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9DDBA1225AB727600380951 /* FilmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
+		B9DDBA2225AB79E700380951 /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilmDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +165,10 @@
 		B9716C3525A8A48600A99041 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B9DDBA0225AB631300380951 /* Audio */,
+				B9716CF725AB4EBD00A99041 /* Fonts */,
 				B9716C2825A8A31400A99041 /* Assets.xcassets */,
-				B9716C4525A8AF4100A99041 /* Localizable.string.strings */,
+				B9DDBA0F25AB6ED000380951 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -162,6 +184,7 @@
 		B9716C3725A8A4AE00A99041 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B9716CF225AB4B4200A99041 /* NavigationController */,
 				B9716CA625AA083100A99041 /* Detail */,
 				B9716C5025A8B2EA00A99041 /* Home */,
 			);
@@ -201,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				B9716C5F25A8BEC400A99041 /* UIView+Pin.swift */,
+				B9716CFE25AB50FA00A99041 /* UIFont.swift */,
+				B9DDB9E725AB5EFB00380951 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +233,7 @@
 		B9716C6325A8C85E00A99041 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B9DDB9E325AB5AB900380951 /* BaseCollectionViewCell.swift */,
 				B9716C9825A999F700A99041 /* Grid */,
 				B9716C9225A993F000A99041 /* List */,
 			);
@@ -253,6 +279,7 @@
 		B9716CA625AA083100A99041 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B9DDBA1125AB724400380951 /* FilmDetail */,
 				B9716CA725AA085D00A99041 /* DetailViewController.swift */,
 				B9716CC625AA102200A99041 /* Cells */,
 			);
@@ -304,6 +331,40 @@
 				B9716CDE25AA1C2A00A99041 /* VehicleTableViewCell.xib */,
 			);
 			path = Vehicles;
+			sourceTree = "<group>";
+		};
+		B9716CF225AB4B4200A99041 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CF325AB4B6100A99041 /* BlackNavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		B9716CF725AB4EBD00A99041 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B9716CF925AB4EC900A99041 /* Starjedi.ttf */,
+				B9716CF825AB4EC800A99041 /* Starjhol.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B9DDBA0225AB631300380951 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				B9DDBA0325AB632300380951 /* star-wars-theme-song.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		B9DDBA1125AB724400380951 /* FilmDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B9DDBA2225AB79E700380951 /* FilmDetailViewController.xib */,
+				B9DDBA1225AB727600380951 /* FilmDetailViewController.swift */,
+			);
+			path = FilmDetail;
 			sourceTree = "<group>";
 		};
 		C17761C66217271981AF69E2 /* Pods */ = {
@@ -359,6 +420,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = B9716C1325A8A30F00A99041;
 			productRefGroup = B9716C1D25A8A30F00A99041 /* Products */;
@@ -376,13 +438,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C9625A9940C00A99041 /* ListCollectionViewCell.xib in Resources */,
+				B9DDBA0D25AB6ED000380951 /* Localizable.strings in Resources */,
 				B9716CDA25AA1C0B00A99041 /* FilmTableViewCell.xib in Resources */,
 				B9716CE025AA1C2A00A99041 /* VehicleTableViewCell.xib in Resources */,
 				B9716C6825A8C8A600A99041 /* GridCollectionViewCell.xib in Resources */,
 				B9716C2C25A8A31400A99041 /* LaunchScreen.storyboard in Resources */,
-				B9716C4625A8AF4100A99041 /* Localizable.string.strings in Resources */,
+				B9DDBA0425AB632300380951 /* star-wars-theme-song.mp3 in Resources */,
 				B9716CD225AA1BD100A99041 /* ImageTableViewCell.xib in Resources */,
+				B9DDBA2325AB79E700380951 /* FilmDetailViewController.xib in Resources */,
 				B9716CCB25AA111E00A99041 /* StarDetailTableViewCell.xib in Resources */,
+				B9716CFC25AB4ED200A99041 /* Starjhol.ttf in Resources */,
+				B9716CFA25AB4ED000A99041 /* Starjedi.ttf in Resources */,
 				B9716C2925A8A31400A99041 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,10 +521,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9716C4D25A8B08900A99041 /* AppCoordinator.swift in Sources */,
+				B9DDBA1425AB727600380951 /* FilmDetailViewController.swift in Sources */,
 				B9716CA925AA085D00A99041 /* DetailViewController.swift in Sources */,
+				B9716CFF25AB50FA00A99041 /* UIFont.swift in Sources */,
 				B9716C7725A8F39200A99041 /* Services.swift in Sources */,
+				B9DDB9E825AB5EFB00380951 /* UIViewController.swift in Sources */,
 				B9716C7B25A8F3E700A99041 /* StarWarsApi.swift in Sources */,
 				B9716C2025A8A30F00A99041 /* AppDelegate.swift in Sources */,
+				B9716CF425AB4B6100A99041 /* BlackNavigationController.swift in Sources */,
 				B9716C4925A8B05800A99041 /* Coordinator.swift in Sources */,
 				B9716C6725A8C8A600A99041 /* GridCollectionViewCell.swift in Sources */,
 				B9716C6B25A8C90B00A99041 /* Reusable.swift in Sources */,
@@ -469,6 +539,7 @@
 				B9716C9A25A99E1300A99041 /* Models.swift in Sources */,
 				B9716CD125AA1BD100A99041 /* ImageTableViewCell.swift in Sources */,
 				B9716C6F25A8CF7300A99041 /* Layouts.swift in Sources */,
+				B9DDB9E425AB5AB900380951 /* BaseCollectionViewCell.swift in Sources */,
 				B9716CDF25AA1C2A00A99041 /* VehicleTableViewCell.swift in Sources */,
 				B9716C9D25A9A89900A99041 /* ApiServices.swift in Sources */,
 				B9716C2225A8A30F00A99041 /* SceneDelegate.swift in Sources */,
@@ -485,8 +556,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				B9716C2B25A8A31400A99041 /* Base */,
+				B9DDBA0B25AB6EBC00380951 /* it */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B9DDBA0F25AB6ED000380951 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9DDBA0E25AB6ED000380951 /* en */,
+				B9DDBA1025AB6ED700380951 /* it */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -496,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -557,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

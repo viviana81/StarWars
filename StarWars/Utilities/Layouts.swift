@@ -21,17 +21,20 @@ enum CollectionLayout {
         }
     }
     
-   static var gridLayout: UICollectionViewLayout {
+    static var gridLayout: UICollectionViewLayout {
+        
+        let numberOfItemsInRow = UIDevice.current.userInterfaceIdiom == .pad ? 3 : 2
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(100))
+                                               heightDimension: .absolute(150))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
-                                                       subitem: item, count: 3)
+                                                       subitem: item, count: numberOfItemsInRow)
         
         group.interItemSpacing = .fixed(CGFloat(10))
         
@@ -45,10 +48,10 @@ enum CollectionLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 1, trailing: 5)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                               heightDimension: .absolute(50))
+                                               heightDimension: .absolute(80))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        subitem: item, count: 1)

@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  StarWars
+
+  Created by Viviana Capolvenere on 10/01/21.
+  
+*/
+
+// Home
+
+"home.title" = "StarWars";
+
+// Star detail
+
+"starDetail.name.title" = "Nome";
+"starDetail.mass.title" = "Massa";
+"starDetail.height.title" = "Altezza";
+"starDetail.eye.title" = "Colore degli occhi";
+
+// Film
+
+"filmDetail.title.title" = "Titolo";
+"filmDetail.message.title" = "Messaggio";
+"filmDetail.date.title" = "Data";
+
+// Vehicle
+"vehicleDetail.name.title" = "Nome";
+"vehicleDetail.model.title" = "Modello";
+"vehicleDetail.manifacturer.title" = "Produttore";
+"vehicleDetail.price.title" = "Prezzo";
+"vehicleDetail.lenght.title" = "Lunghezza";
+
+// Header
+
+"header.detail.title" = "caratteristiche";
+"header.films.title" = "film";
+"header.vehicles.title" = "veicoli";
+
+// Film detail
+
+"film.detail.message" = "titoli di apertura";

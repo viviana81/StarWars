@@ -10,24 +10,30 @@ import Moya
 
 enum StarWarsApi {
     case getPeople(page: Int?)
+    case getFilm(id: String)
+    case getVehicle(id: String)
 }
 
 extension StarWarsApi: TargetType {
     
     var baseURL: URL {
-        return URL(string: "https://swapi.dev/api/")!
+        return URL(string: "https://private-e2e58-starwars8.apiary-mock.com/")!
     }
     
     var path: String {
         switch self {
         case .getPeople:
             return "people/"
+        case .getFilm(let id):
+            return "films/\(id)"
+        case .getVehicle(let id):
+            return "vehicle/\(id)"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getPeople:
+        case .getPeople, .getFilm, .getVehicle:
             return .get
         }
     }
@@ -45,6 +51,8 @@ extension StarWarsApi: TargetType {
             } else {
                 return .requestPlain
             }
+        case .getFilm, .getVehicle:
+            return .requestPlain
         }
     }
     

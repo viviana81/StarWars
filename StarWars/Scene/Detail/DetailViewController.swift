@@ -7,12 +7,19 @@
 
 import UIKit
 
+protocol DetailViewControllerDelegate: class {
+    func getData(star: People)
+    func onFilmCellTap(film: Film)
+}
+
 class DetailViewController: UITableViewController {
     
     enum State {
         case idle
         case loading
-        case loaded(films: [Film], vehicles: [Vehicle])
+        case filmLoaded(films: [Film])
+        case vehicleLoaded(vehicles: [Vehicle])
+        case error(error: Error)
     }
     
     enum Section {
@@ -24,13 +31,13 @@ class DetailViewController: UITableViewController {
         var header: String {
             switch self {
             case .photo:
-                return "Immagine"
+                return ""
             case .detail:
-                return "Caratteristiche"
+                return "header.detail.title".localized
             case .films:
-                return "Film"
+                return "header.films.title".localized
             case .vehicles:
-                return "Veicoli"
+                return "header.vehicles.title".localized
             }
         }
         
@@ -67,14 +74,18 @@ class DetailViewController: UITableViewController {
             switch status {
             case .idle: break
             case .loading: break
-            case .loaded(let films, let vehicles):
+            case .filmLoaded(let films):
                 self.films = films
+                tableView.reloadSections([2], with: .automatic)
+            case .vehicleLoaded(let vehicles):
                 self.vehicles = vehicles
-                tableView.reloadData()
+                tableView.reloadSections([3], with: .automatic)
+            case .error(let error):
+                showAlert(andMessage: error.localizedDescription)
             }
         }
     }
-    
+    weak var delegate: DetailViewControllerDelegate?
     private let star: People
     
     init(star: People) {
@@ -94,7 +105,7 @@ class DetailViewController: UITableViewController {
         tableView.register(StarDetailTableViewCell.self)
         tableView.register(FilmTableViewCell.self)
         tableView.register(VehicleTableViewCell.self)
-        
+        delegate?.getData(star: star)
     }
 }
 
@@ -123,42 +134,51 @@ extension DetailViewController {
             return cell
         case .films(let films):
             let cell: FilmTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            let film = films[indexPath.row]
+            cell.configure(withFilm: film)
             return cell
         case .vehicles(let vehicles):
             let cell: VehicleTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            let vehicle = vehicles[indexPath.row]
+            cell.configure(withVehicle: vehicle)
             return cell
 
         }
-    
-        /*
-         
-         se la sezione è di tipo immagine {
-            dequeue della cella tipo immagine
-            configuro cella immagine
-            restituisco cella
-         } altrimenti se è cella dettagli {
-         
-         } altrimenti se è cella films {
-            deuqueue della cella tipo film
-            recupero il film partendo dalla sezione
-            configuro la cella con il film
-            restitituisco la cella
-         }
-         
-         */
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let section = sections[section]
-        switch section {
-        case .photo:
-            return section.header
-        case .detail:
-            return section.header
-        case .films:
-            return section.header
-        case .vehicles:
-            return section.header
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = UIView()
+        header.backgroundColor = .black
+        header.tintColor = .white
+        
+        let label = UILabel(frame: CGRect(x: 23, y: 0, width: 250, height: 50))
+        label.font = UIFont.jediFont(ofSize: 24)
+            label.textColor = .white
+        label.text = sections[section].header
+        
+        header.addSubview(label)
+        
+        return header
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0
+        } else {
+            return 50
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = sections[indexPath.section]
+        switch section {
+        case .films(let films):
+            let film = films[indexPath.row]
+            delegate?.onFilmCellTap(film: film)
+        default:
+            break
+        }
+        
     }
 }

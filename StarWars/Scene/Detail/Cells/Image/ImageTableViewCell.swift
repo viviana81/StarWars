@@ -17,7 +17,7 @@ class ImageTableViewCell: UITableViewCell, Reusable {
         if let id = people.id {
             let string = "http://mobile.aws.skylabs.it/mobileassignments/swapi/\(id).png"
             let url = URL(string: string)
-            starImage.kf.setImage(with: url)
+            starImage.kf.setImage(with: url, placeholder: UIImage(named: "placeholder"))
         }
     }
 }
