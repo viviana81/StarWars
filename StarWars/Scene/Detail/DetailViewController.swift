@@ -115,6 +115,7 @@ extension DetailViewController {
         switch section {
         case .photo:
             let cell: ImageTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(withPeople: star)
             return cell
         case .detail:
             let cell: StarDetailTableViewCell = tableView.dequeueReusableCell(for: indexPath)

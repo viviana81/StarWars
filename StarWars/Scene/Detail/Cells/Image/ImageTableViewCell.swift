@@ -6,18 +6,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ImageTableViewCell: UITableViewCell, Reusable {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    @IBOutlet weak var starImage: UIImageView!
+    
+    func configure(withPeople people: People) {
+        
+        if let id = people.id {
+            let string = "http://mobile.aws.skylabs.it/mobileassignments/swapi/\(id).png"
+            let url = URL(string: string)
+            starImage.kf.setImage(with: url)
+        }
+    }
 }

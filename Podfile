@@ -7,5 +7,6 @@ target 'StarWars' do
   # Pods for StarWars
    pod 'SwiftLint'
    pod 'Moya', '~> 13.0'
+   pod 'Kingfisher'
 
 end
